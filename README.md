@@ -25,6 +25,15 @@
 $ npm i ai-infra --save-dev
 ```
 
+## Usage
+
+```javascript
+const { pixelDiff } = require('ai-infra');
+
+// example
+// https://github.com/ai-modules/ai-infra/blob/master/image-playground/diff/test.js
+```
+
 ## License
 
 The MIT License (MIT)
