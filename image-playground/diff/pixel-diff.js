@@ -28,9 +28,12 @@ async function pixelDiff(img1Path, img2Path, _options = {}) {
     fs.writeFileSync(options.diffPath, PNG.sync.write(stream));  
   }
 
+  const total = width * height;
+
   return {
     stream,
     value,
+    total,
   };
 }
 
