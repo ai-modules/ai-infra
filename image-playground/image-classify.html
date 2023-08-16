@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mobilenet Classify</title>
+  <script src="./node_modules/@tensorflow/tfjs/dist/tf.js"></script>
+  <script src="./node_modules/@tensorflow-models/mobilenet/dist/mobilenet.js"></script>
+  <style>
+    #wrapper {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <img id="img" src="./cat.jpg" width="300" />
+    <pre id="log"></pre>
+  </div>
+  <a href="https://github.com/tensorflow/tfjs-models" target="_blank">
+    https://github.com/tensorflow/tfjs-models
+  </a>
+  <script>
+  const img = document.getElementById('img');
+  const log = document.getElementById('log');
+  console.log(window.mobilenet);
+  function showLog(content) {
+    log.innerText = content;
+  }
+  // Load the model.
+  async function main() {
+    showLog(`start load ${JSON.stringify(window.mobilenet)}`);
+    const model = await mobilenet.load({
+      version: 2,
+      alpha: 0.75,
+    });
+    showLog('end load');
+    const predictions = await model.classify(img);
+    showLog(`Predictions results:\n${JSON.stringify(predictions, null, 2)}`);
+  }
+  main().catch(console.log);
+  </script>
+</body>
+</html>
