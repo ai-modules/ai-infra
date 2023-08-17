@@ -34,6 +34,21 @@ const { pixelDiff } = require('ai-infra');
 // https://github.com/ai-modules/ai-infra/blob/master/image-playground/diff/test.js
 ```
 
+### CLI
+
+```bash
+$ npm i ai-infra -g
+```
+
+Command:
+
+```bash
+Usage: ai-infra [options] [command]
+
+Commands:
+  diff [options] <img1> <img2>  图片相似度对比，目前只支持 PNG 格式
+```
+
 ## License
 
 The MIT License (MIT)
