@@ -1,6 +1,6 @@
 {
   "name": "ai-infra",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "ai-infra",
   "keywords": [
     "ai"
@@ -16,7 +16,8 @@
     "url": "git://github.com/ai-modules/ai-infra.git"
   },
   "dependencies": {
-    "pixelmatch": "^5.3.0"
+    "pixelmatch": "^5.3.0",
+    "sharp": "^0.32.4"
   },
   "devDependencies": {
     "eslint": "*",
