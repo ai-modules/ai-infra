@@ -12,8 +12,8 @@ async function pixelDiff(img1Path, img2Path, _options = {}) {
 
   const options = Object.assign(defaultOptions, _options);
 
-  const img1 = PNG.sync.read(img1Path);
-  const img2 = PNG.sync.read(img2Path);
+  const img1 = PNG.sync.read(fs.readFileSync(img1Path));
+  const img2 = PNG.sync.read(fs.readFileSync(img2Path));
 
   const { width, height } = img1;
 
