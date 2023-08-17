@@ -13,7 +13,7 @@ async function main() {
     diffPath,
     diffMask: false,
   });
-  console.log('diff value: %d, total: %d', res.value, res.total, );
+  console.log('diff value: %d, total: %d', res.value, res.total);
 }
 
 main().then().catch(console.log);
